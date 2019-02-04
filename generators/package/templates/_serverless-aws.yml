@@ -4,7 +4,6 @@ plugins:
 <% if (kmsEncryptionKeyId) { -%>
   - serverless-kms-secrets
 <% } -%>
-  - serverless-plugin-typescript
   - serverless-webpack
 <% if (ddbTableName) { -%>
   - serverless-dynamodb-local
@@ -73,7 +72,7 @@ resources: ${file(./serverless-aws-resources.yml):resources}
 
 custom:
   webpack:
-    webpackConfig: '../../../webpack.config.js'
+    webpackConfig: '../../webpack.config.js'
 
 <% if (kmsEncryptionKeyId) { -%>
   kmsSecrets: ${file(kms-secrets.${opt:stage, self:provider.stage}.${opt:region, self:provider.region}.yml)}

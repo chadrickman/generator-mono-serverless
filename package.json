@@ -8,9 +8,16 @@
         "email": "wyvern@smartcreations.com.au",
         "url": "https://zoto.io"
     },
-    "files": ["generators"],
+    "files": [
+        "generators"
+    ],
     "main": "generators/app/index.js",
-    "keywords": ["lambda", "yeoman-generator", "serverless", "typescript"],
+    "keywords": [
+        "lambda",
+        "yeoman-generator",
+        "serverless",
+        "typescript"
+    ],
     "devDependencies": {
         "@types/jest": "^22.2.3",
         "coveralls": "^3.0.0",
@@ -53,11 +60,21 @@
         "semantic-release": "semantic-release"
     },
     "lint-staged": {
-        "*.js": ["eslint --fix", "git add", "jest --bail --findRelatedTests"],
-        "*.json": ["prettier --write", "git add"]
+        "*.js": [
+            "eslint --fix",
+            "git add",
+            "jest --bail --findRelatedTests"
+        ],
+        "*.json": [
+            "prettier --write",
+            "git add"
+        ]
     },
     "eslintConfig": {
-        "extends": ["xo", "prettier"],
+        "extends": [
+            "xo",
+            "prettier"
+        ],
         "env": {
             "jest": true,
             "node": true
@@ -73,7 +90,9 @@
                 }
             ]
         },
-        "plugins": ["prettier"]
+        "plugins": [
+            "prettier"
+        ]
     },
     "repository": "zotoio/generator-mono-serverless",
     "license": "MIT"

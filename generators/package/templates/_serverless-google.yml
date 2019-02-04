@@ -2,7 +2,6 @@ service: <%= name %>
 
 plugins:
   - serverless-google-cloudfunctions
-  - serverless-plugin-typescript
   - serverless-webpack
   - serverless-offline
 

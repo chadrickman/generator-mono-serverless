@@ -5,5 +5,17 @@ module.exports = {
     entry: slsw.lib.entries,
     target: 'node',
     devtool: 'source-map',
-    mode: process.env.NODE_ENV || 'production'
+    mode: process.env.NODE_ENV || 'production',
+    module: {
+        rules: [
+          {
+            test: /\.ts(x?)$/,
+            use: [
+              {
+                loader: 'ts-loader'
+              }
+            ],
+          }
+        ]
+    }
 };
